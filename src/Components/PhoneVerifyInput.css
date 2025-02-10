@@ -1,0 +1,42 @@
+.PhoneInput {    
+    --PhoneInput-color--focus: #ffffff;
+    --PhoneInputInternationalIconPhone-opacity: 0.8;
+    --PhoneInputInternationalIconGlobe-opacity: 0.65;
+    --PhoneInputCountrySelect-marginRight: 0.35em;
+    --PhoneInputCountrySelectArrow-width: 0.3em;
+    --PhoneInputCountrySelectArrow-height: 0.35em;
+    --PhoneInputCountrySelectArrow-marginLeft: var(--PhoneInputCountrySelect-marginRight);
+    --PhoneInputCountrySelectArrow-borderWidth: 1px;
+    --PhoneInputCountrySelectArrow-opacity: 0.45;
+    --PhoneInputCountrySelectArrow-color: #ffffff;
+    --PhoneInputCountrySelectArrow-color--focus: var(--PhoneInput-color--focus);
+    --PhoneInputCountrySelectArrow-transform: rotate(45deg);
+    --PhoneInputCountryFlag-aspectRatio: 1.5;
+    --PhoneInputCountryFlag-height: 1em;
+    --PhoneInputCountryFlag-borderWidth: 1px;
+    --PhoneInputCountryFlag-borderColor: rgba(128, 204, 255, 0.121);
+    --PhoneInputCountryFlag-borderColor--focus: var(--PhoneInput-color--focus);
+    --PhoneInputCountryFlag-backgroundColor--loading: rgba(0, 0, 0, 0.1);
+        text-align: right;/* ضمان محاذاة النص لليسار*/
+
+}
+
+.PhoneInputInput {
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;    
+    direction: ltr; 
+    text-align: right;/* ضمان محاذاة النص لليسار*/
+    @apply bg-form-input w-full p-4 ms-4 rounded-lg text-primary-light leading-tight font-semibold outline-none appearance-none h-[4.625rem];
+}
+
+.PhoneInputInput:focus {
+    outline: none;
+}
+
+
+
+
+

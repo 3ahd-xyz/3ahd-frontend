@@ -1,0 +1,87 @@
+/* Custom date picker theme */
+abbr:where([title]) {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.react-calendar {
+    font-family: 'alexandria', sans-serif;
+    @apply bg-primary-dark text-primary-light border-none shadow-2xl rounded-lg select-none text-sm;
+}
+
+.react-calendar__navigation {
+    @apply text-primary-light;
+}
+
+.react-calendar__navigation button {
+    @apply bg-secondary-dark text-primary-dark hover:bg-secondary-light hover:text-primary-dark focus:outline-none transition-all;
+}
+
+.react-calendar__month-view__weekdays {
+    @apply bg-primary-dark text-secondary-dark;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    @apply text-secondary-dark;
+}
+
+.react-calendar__tile {
+    @apply bg-primary-dark text-primary-light hover:bg-secondary-dark hover:text-primary-dark focus:outline-none focus:text-primary-dark transition-all rounded-lg;
+}
+
+.react-calendar__tile--active {
+    @apply bg-secondary-dark text-primary-dark;
+}
+
+.react-calendar__tile--now {
+    @apply border border-secondary-dark;
+}
+
+.react-calendar__tile--now:hover {
+    @apply bg-secondary-dark text-primary-dark transition-all;
+}
+
+.react-calendar__tile--range {
+    @apply bg-secondary-dark text-primary-dark;
+}
+
+.react-calendar__tile--range:hover {
+    @apply bg-accent text-primary-dark transition-all;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+    @apply bg-primary-dark text-secondary-dark;
+}
+
+.react-calendar__tile:focus {
+    @apply outline-none;
+}
+
+.react-calendar__tile:disabled {
+    @apply text-secondary-dark bg-transparent opacity-10 cursor-not-allowed;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+    @apply bg-primary-dark text-primary-light hover:bg-secondary-dark hover:text-primary-dark focus:outline-none focus:text-primary-dark transition-all;
+}
+
+.react-calendar__tile--active.react-calendar__year-view .react-calendar__tile,
+.react-calendar__tile--active.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__tile--active.react-calendar__century-view .react-calendar__tile {
+    @apply bg-secondary-dark text-primary-dark;
+}
+
+.react-calendar__navigation {
+    @apply rounded-lg;
+    overflow-y: hidden;
+}
+
+.react-calendar__navigation button:hover {
+    @apply bg-secondary-light text-primary-dark;
+}
+
+.react-calendar__navigation button:focus {
+    @apply outline-none;
+}
