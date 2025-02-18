@@ -15,6 +15,7 @@ import ErrorPage from './Pages/ErrorPage';
 import BookingSuccessed from './Pages/BookingSuccessed';
 import Home from './Pages/home';
 import AlreadyBooked from './Pages/AlreadyBooked';
+import ModeratorPanel from "./Pages/ModeratorPanel"; 
 import Hawash from './mods/busList';
 
 // Assets
@@ -65,6 +66,7 @@ function App() {
               <Route path="/bookingSuccessed" element={<BookingSuccessed />} />
               <Route path="/AlreadyBooked" element={<AlreadyBooked />} />
               <Route path="/mod/buses" element={<Hawash />} />
+              <Route path="/moderator-panel" element={<ModeratorPanel />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>
