@@ -246,7 +246,7 @@ export default function BookingSucced() {
 
       {/* Modal for Delete Confirmation */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-start justify-center pt-10">
           <div className="bg-[#1a1a2e] text-white border border-gray-600 shadow-xl rounded-lg p-6 w-96">
             <h2 className="text-xl font-semibold text-center mb-4 text-gray-300">
               تأكيد الحذف
@@ -273,7 +273,7 @@ export default function BookingSucced() {
       )}
       {/* Modal for Adding Passenger */}
       {showAddModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-start justify-center pt-10">
           <div className="bg-[#1a1a2e] text-white border border-gray-600 shadow-xl rounded-lg p-6 w-96">
             <h2 className="text-xl font-semibold text-center mb-4">
               إضافة راكب جديد
@@ -309,7 +309,7 @@ export default function BookingSucced() {
               }
             />
             <div className="flex justify-end gap-x-3 mt-4">
-            <button
+              <button
                 className="px-6 py-2 text-gray-300 bg-gray-800 border border-gray-600 rounded-lg hover:bg-gray-700 transition shadow-md"
                 onClick={handleCancelAddModel}
               >
