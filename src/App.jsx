@@ -16,6 +16,7 @@ import BookingSuccessed from './Pages/BookingSuccessed';
 import Home from './Pages/home';
 import AlreadyBooked from './Pages/AlreadyBooked';
 import Hawash from './mods/busList';
+import WomenTravelFatwaPage from "./Pages/WomenTravelFatwaPage";
 
 // Assets
 import bgWave from "./assets/imgs/background-wave.svg";
@@ -62,6 +63,7 @@ function App() {
               <Route path="/gender" element={<GenderForm />} />
               <Route path="/details" element={<DetailsForm />} />
               <Route path="/buses" element={<BusesForm />} />
+              <Route path="/fatwa/women-al-aqsa-travel" element={<WomenTravelFatwaPage />} />
               <Route path="/bookingSuccessed" element={<BookingSuccessed />} />
               <Route path="/AlreadyBooked" element={<AlreadyBooked />} />
               <Route path="/mod/buses" element={<Hawash />} />
