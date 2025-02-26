@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { FaArrowLeft, FaShareAlt, FaBook } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useSearchParams } from "react-router-dom";
 
 export default function WomenTravelFatwaPage() {
+  const [searchParams] = useSearchParams();
+  const selectedGender = searchParams.get("selected");
+  const phoneNumber = searchParams.get("phoneNumber");
   const navigate = useNavigate();
   const [showToast, setShowToast] = useState(false);
 
@@ -20,8 +23,8 @@ export default function WomenTravelFatwaPage() {
   return (
     <div className="bg-[#1a1a2e] min-h-screen text-white flex flex-col items-center px-4 py-6">
       <div className="sticky top-0 z-50 w-full bg-[#2e2e3a] shadow-md p-4 flex justify-between items-center rounded-lg">
-        <button
-          onClick={() => navigate("/buses")}
+      <button
+          onClick={() => navigate(`/gender?selected=${selectedGender || "female"}&phoneNumber=${phoneNumber || ""}`)}
           className="flex items-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg"
         >
           <FaArrowLeft /> العودة
@@ -37,10 +40,12 @@ export default function WomenTravelFatwaPage() {
         </button>
       </div>
       {showToast && (
-        <div className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg animate-fade-in-out">
-          ✅ تم نسخ رابط الفتوى إلى الحافظة
-        </div>
-      )}
+  <div className="fixed top-20 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-[100] text-center text-sm w-11/12 max-w-xs animate-fade-in-out">
+    ✅ تم نسخ رابط الفتوى إلى الحافظة
+  </div>
+)}
+
+
 
       {/* Fatwa Content */}
       <div className="bg-gray-800 rounded-lg p-4 mt-6 w-full max-w-md text-right leading-relaxed overflow-y-auto">
